@@ -31,6 +31,21 @@
         &-dropdown {
           display: flex;
 
+          &-additional_phone {
+            display: flex;
+            flex-direction: column;
+            padding: 0 12px;
+
+            &-title {
+              margin-bottom: 8px;
+
+            }
+
+            &-phone {
+
+            }
+          }
+
           &:hover {
             text-decoration: none;
           }
@@ -531,6 +546,94 @@
 
               @media screen and (max-width: 767px) {
                 font-size: 14px;
+              }
+            }
+
+          }
+
+          &-input_group {
+            width: 90%;
+
+            @media screen and (max-width: 1223px) {
+              width: 100%;
+            }
+
+            &-code {
+              border-radius: 20px 0 0 20px;
+              border-top: 1px solid #4A4949;
+              border-right: 2px solid #4A4949;
+              border-bottom: 1px solid #4A4949;
+              border-left: 1px solid #4A4949;
+
+              button {
+                padding: 3px 12px;
+              }
+              &-dropdown {
+
+                &:hover {
+                  text-decoration: none;
+                }
+
+                &:focus {
+                  text-decoration: none;
+                  box-shadow: none;
+                }
+
+                &-head {
+                  display: flex;
+                  align-items: center;
+
+                  &-title {
+                    font-size: 18px;
+                    color: rgba(74, 73, 73, 0.5);
+                    margin-right: 10px;
+
+                    @media screen and (max-width: 1223px) {
+                      font-size: 16px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                      font-size: 14px;
+                    }
+                  }
+
+                  &-chevron {
+                    margin-right: 16px;
+
+                    svg {
+                      width: 12px;
+                      height: 12px;
+                      margin-bottom: 4px;
+                    }
+                  }
+                }
+
+                &-items {
+
+                  &-item {
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+
+            &-input {
+              border-radius: 0 20px 20px 0;
+              border-top: 1px solid #4A4949;
+              border-right: 1px solid #4A4949;
+              border-bottom: 1px solid #4A4949;
+              border-left: 0;
+
+              @media screen and (max-width: 1223px) {
+                width: 100%;
+              }
+
+              &::placeholder {
+                color: rgba(74, 73, 73, 0.5);
+
+                @media screen and (max-width: 767px) {
+                  font-size: 14px;
+                }
               }
             }
 

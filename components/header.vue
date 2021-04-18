@@ -29,6 +29,16 @@
                 <b-icon-chevron-down v-else variant="secondary" />
               </i>
             </template>
+            <div class="header-container-menu-phone-dropdown-additional_phone">
+              <span
+                class="header-container-menu-phone-dropdown-additional_phone-title"
+                v-text="'Россия'"
+              />
+              <span
+                class="header-container-menu-phone-dropdown-additional_phone-phone"
+                v-text="'+7 499 705 97 79'"
+              />
+            </div>
           </b-dd>
         </div>
         <span

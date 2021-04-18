@@ -173,15 +173,16 @@
               </div>
             </div>
             <b-input
-              v-else-if="
-                item.type === 'text' ||
-                item.type === 'number' ||
-                item.type === 'phone'
-              "
+              v-else-if="item.type === 'text' || item.type === 'number'"
               v-model="item.value"
               :placeholder="item.placeholder"
               :type="item.type"
               class="sections-form-container-list-item-input"
+            />
+            <phone-input
+              v-else-if="item.type === 'phone'"
+              v-model="item.value"
+              @set-phone="setPhone($event, key)"
             />
           </div>
         </div>
@@ -228,13 +229,22 @@
           Телефон: 8 800 707 2002
         </span>
         <div class="sections-footer-container-icons">
-          <a href="#" class="sections-footer-container-icons-icon">
+          <a
+            href="https://www.facebook.com/vozovoz"
+            class="sections-footer-container-icons-icon"
+          >
             <vz-icon-facebook />
           </a>
-          <a href="#" class="sections-footer-container-icons-icon">
+          <a
+            href="https://vk.com/vozovoz"
+            class="sections-footer-container-icons-icon"
+          >
             <vz-icon-vk />
           </a>
-          <a href="#" class="sections-footer-container-icons-icon">
+          <a
+            href="https://www.instagram.com/tk.vozovoz"
+            class="sections-footer-container-icons-icon"
+          >
             <vz-icon-instagram />
           </a>
         </div>
@@ -256,8 +266,10 @@ import VzIconFacebook from '../components/icons/vz-icon-facebook'
 import VzIconVk from '../components/icons/vz-icon-vk'
 import VzIconInstagram from '../components/icons/vz-icon-instagram'
 import VzIconSuccess from '../components/icons/vz-icon-success'
+import PhoneInput from '../components/phoneInput'
 export default {
   components: {
+    PhoneInput,
     VzIconSuccess,
     VzIconInstagram,
     VzIconVk,
@@ -420,6 +432,10 @@ export default {
         }
         return preVal
       }, [])
+      console.warn('form', this.formData)
+    },
+    setPhone(phone, key) {
+      this.form[key].value = phone
     },
   },
 }
