@@ -80,8 +80,12 @@
               </div>
               <span
                 class="sections-information-container-block-buttons-button-title"
-                v-text="'Юридическим лицам'"
-              />
+              >
+                Юридическим<br
+                  class="sections-information-container-block-buttons-button-title-break"
+                />
+                лицам
+              </span>
             </div>
             <div
               class="sections-information-container-block-buttons-button"
@@ -191,7 +195,9 @@
           />
           <span class="sections-form-container-button_info-info">
             Нажимая на кнопку "Оформить" вы выражаете свое согласие с
-            применяемой<br />
+            применяемой<br
+              class="sections-form-container-button_info-info-break"
+            />
             ООО "Возовоз"
             <a href="#" class="sections-form-container-button_info-info-link">
               политикой в отношении обработки персональных данных.
@@ -214,9 +220,11 @@
     <section class="sections-footer">
       <div class="sections-footer-container">
         <span class="sections-footer-container-description">
-          Транспортная компания "Возовоз" организация перевозок грузов<br />
+          Транспортная компания "Возовоз" организация перевозок грузов<br
+            class="sections-footer-container-description-break"
+          />
           194292, Санкт-Петербург, 6-й Верхний переулок дом 12 литер А, кабинет
-          №210<br />
+          №210<br class="sections-footer-container-description-break" />
           Телефон: 8 800 707 2002
         </span>
         <div class="sections-footer-container-icons">
